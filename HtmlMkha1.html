@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MENU TOOL MINHKHA</title>
+
+<style>
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+button{
+padding:15px;
+margin:10px;
+font-size:18px;
+border-radius:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>MENU TOOL MINHKHA</h1>
+
+<button onclick="connect()">Kết nối Server</button>
+
+<p id="status">Chưa kết nối</p>
+
+<p id="server"></p>
+
+<script>
+
+function connect(){
+
+fetch("https://raw.githubusercontent.com/Kgzigdix/Htmlmkha/main/config.txt")
+
+.then(response => response.text())
+
+.then(data => {
+
+document.getElementById("status").innerHTML="Đã kết nối server";
+
+document.getElementById("server").innerHTML=data;
+
+})
+
+}
+
+</script>
+
+</body>
+</html>
