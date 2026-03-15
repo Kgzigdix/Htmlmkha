@@ -1,0 +1,4 @@
+menu=on
+feature1=on
+feature2=off
+server=MinhKha
